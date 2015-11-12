@@ -6,6 +6,7 @@ public class FileVO {
      private String fileName;
      private InputStream in;
      private Integer fileSize;
+     
 	/**
 	 * @return the fileName
 	 */
