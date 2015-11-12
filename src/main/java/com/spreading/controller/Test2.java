@@ -1,6 +1,5 @@
 package com.spreading.controller;
 
-public class Test {
+public class Test2 {
 
-	
 }
