@@ -24,6 +24,7 @@ import com.spreading.vo.FileVO;
 @Controller
 public class UploadAction {
 	
+	
     @Autowired
     private QiniuUtils qiniuUtils;
 
