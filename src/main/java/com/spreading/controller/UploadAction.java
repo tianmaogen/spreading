@@ -25,6 +25,7 @@ import com.spreading.vo.FileVO;
 public class UploadAction {
 	
 	
+	
     @Autowired
     private QiniuUtils qiniuUtils;
 
