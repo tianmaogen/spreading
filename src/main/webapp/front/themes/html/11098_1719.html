@@ -1,0 +1,107 @@
+
+<!-- saved from url=(0046)http://www.37cs.com/html/click/11098_1719.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>37cs_v1.2</title>
+<style type="text/css">body {margin: 0;}</style>
+</head>
+<body marginwidth="0" marginheight="0">
+<script language="javascript">
+var _pWidth		= 660;
+var _pHeight	= 60;
+//var _isChrome	= navigator.userAgent.toLowerCase().indexOf('chrome')>0?true:false;
+var _isChrome	= _getBrowserIsChrome();//navigator.userAgent.toLowerCase().indexOf('chrome')>0?true:false;
+function _getBrowserIsChrome(){
+	var _userAgent = navigator.userAgent.toLowerCase();
+	if(_userAgent.indexOf('edge')>=0){
+		return false;
+	}else if(_userAgent.indexOf('chrome')>=0){
+		return true;
+	}else{
+		return false;
+	}
+}
+var _adlist		= new Array();
+_adlist[0]={img:'http://c.ns8d.com/b/1/97/kjd9jd.swf?uid=511098',url:'http://c.ns8d.com/s/1/97/0.html?uid=511098&ext=NTExMDk4LDE3MTksMzE0NzMsMCwwLDExMi44My4yMDEuMjI1',p:34};_adlist[1]={img:'http://c.ns8d.com/b/1/1557/kjd9jd.swf?uid=511098',url:'http://c.ns8d.com/s/1/1557/0.html?uid=511098&ext=NTExMDk4LDE3MTksMzY0NTksMCwxLDExMi44My4yMDEuMjI1',p:33};_adlist[2]={img:'http://c.ns8d.com/b/1/2101/kjd9jd.swf?uid=511098',url:'http://c.ns8d.com/s/1/2101/0.html?uid=511098&ext=NTExMDk4LDE3MTksMzYyMzYsMCwyLDExMi44My4yMDEuMjI1',p:33};
+
+if(_isChrome){
+	_chromeFlashShow(_pWidth,_pHeight,_adlist);
+}else{
+	_normalFlashShow(_pWidth,_pHeight,_adlist);
+}
+
+function _normalFlashShow(pWidth,pHeight,adlist){
+	var ref=encodeURIComponent(document.referrer);
+	var i,s=0,m=(new Date().getTime())%100+1;
+	for(i=0;i<adlist.length;i++){
+		if(m>s && m <=(s+adlist[i].p) ){
+			break;
+		}
+		s += adlist[i].p;
+	}
+	if(i>=2){
+		i=1;
+	}
+	var _imgUrl=adlist[i].img;
+	if(_imgUrl.indexOf('swf')<0){
+		document.write("<a href='"+adlist[i].url+"&domain="+ref+"' target='_blank'><img src='"+_imgUrl+"'width='"+pWidth+"' height='"+pHeight+"' border='0'/></a>");
+	}else if(_imgUrl!=''){
+		document.write("<div style='position:absolute;z-index:1'><a href='"+adlist[i].url+"&referer="+ref+"' target='_blank'><img src='http://img.twcczhu.com/s/dot.gif' width='"+pWidth+"' height='"+pHeight+"' border='0'></a></div>");
+		document.write("<object id='_cs_click_iframe_v1.2' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,28,0' width='"+pWidth+"' height='"+pHeight+"' style='cursor:hand;cursor:pointer;'>");
+		document.write("<param name='movie' value='"+_imgUrl+"'><param name='quality' value='high'><param name='wmode' value='Opaque'><param name='scale' value='exactFit'>");
+		document.write("<embed wmode='Opaque'  src='"+_imgUrl+"'  width='"+pWidth+"' height='"+pHeight+"' scale='exactFit' quality='high' pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash'></embed>");
+		document.write("</object>");
+	}
+}
+
+function _chromeFlashShow(pWidth,pHeight,adlist){
+	var _changeSize = 1000;
+	//params
+	var ref=encodeURIComponent(document.referrer);
+	var i,s=0,m=(new Date().getTime())%100+1;
+	for(i=0;i<adlist.length;i++){
+		if(m>s && m <=(s+adlist[i].p) ){
+			break;
+		}
+		s += adlist[i].p;
+	}
+	if(i>=2){
+		i=1;
+	}
+	var _imgUrl=adlist[i].img;
+	if(_imgUrl.indexOf('swf')<0){
+		document.write("<a href='"+adlist[i].url+"&domain="+ref+"' target='_blank'><img src='"+_imgUrl+"'width='"+pWidth+"' height='"+pHeight+"' border='0'/></a>");
+		return ;
+	}
+	var _changeWidth  = pWidth + _changeSize;
+	var _changeHeight = pHeight + _changeSize;
+	document.write("<div style='position:absolute;z-index:1'><a href='"+adlist[i].url+"&referer="+ref+"' target='_blank'><img src='http://img.twcczhu.com/s/dot.gif' width='"+pWidth+"' height='"+pHeight+"' border='0'></a></div>");
+	document.write("<object id='_cs_click_iframe_v1.2' classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' codebase='http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,28,0' width='"+pWidth+"' height='"+pHeight+"' style='cursor:hand;cursor:pointer;'>");
+	document.write("<param name='movie' value='"+_imgUrl+"'><param name='quality' value='high'><param name='wmode' value='Opaque'><param name='scale' value='exactFit'>");
+	document.write("<embed wmode='Opaque'  src='"+_imgUrl+"'  width='"+ _changeWidth +"' height='"+ _changeHeight+"' scale='exactFit' quality='high' pluginspage='http://www.macromedia.com/go/getflashplayer' type='application/x-shockwave-flash'></embed>");
+	document.write("</object>");
+	var _playFlash = function(step){
+		if(step>=5){
+			return ;
+		}
+		var _flashObjs = document.getElementById('_cs_click_iframe_v1.2');
+		if(_flashObjs!=undefined){
+			for(var i in _flashObjs.children){
+				if(_flashObjs.children[i]!=undefined && _flashObjs.children[i]['type']=='application/x-shockwave-flash'){
+					var _flashVideo			= _flashObjs.children[i];
+					_flashVideo['width']	= pWidth;
+					_flashVideo['height']	= pHeight;
+					break;
+				}
+			}
+		}else{
+			step++;
+			setTimeout(function(){
+				_playFlash(step);
+			},50);
+		}
+	};
+	setTimeout(function(){
+		_playFlash(1);
+	},100);
+}
+</script><div style="position:absolute;z-index:1"><a href="http://c.ns8d.com/s/1/97/0.html?uid=511098&ext=NTExMDk4LDE3MTksMzE0NzMsMCwwLDExMi44My4yMDEuMjI1&referer=http%3A%2F%2Fwww.ygdy8.com%2Fhtml%2Ftv%2Foumeitv%2F20151012%2F49287.html" target="_blank"><img src="dot(1).gif" width="660" height="60" border="0"></a></div><object id="_cs_click_iframe_v1.2" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,28,0" width="660" height="60" style="cursor:hand;cursor:pointer;"><param name="movie" value="http://c.ns8d.com/b/1/97/kjd9jd.swf?uid=511098"><param name="quality" value="high"><param name="wmode" value="Opaque"><param name="scale" value="exactFit"><embed wmode="Opaque" src="http://c.ns8d.com/b/1/97/kjd9jd.swf?uid=511098" width="660" height="60" scale="exactFit" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></object></body></html>

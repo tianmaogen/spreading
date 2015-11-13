@@ -1,0 +1,29 @@
+.thunder_spr-sprite, .thunder_spr-close, .thunder_spr-superman { background-image: url('../img/spr-s8a8665a924.png'); background-repeat: no-repeat; }
+
+.thunder_spr-close { background-position: 0 0; height: 10px; width: 10px; }
+
+.thunder_spr-superman { background-position: 0 -10px; height: 161px; width: 144px; }
+
+.thunder_pop-cover { position: fixed; _position: absolute; top: 0; bottom: 0; left: 0; right: 0; width: 100%; _height: 1000px; background-color: #000; opacity: .5; filter: alpha(opacity=50); }
+
+.thunder_wp_pop { position: fixed; _position: absolute; top: 50%; left: 50%; overflow: hidden; font-family: \5FAE\8F6F\96C5\9ED1,"simsun",tahoma,arial,sans-serif; z-index: 1000; font: 12px/1.2 "Microsoft YaHei","simsun",tahoma,arial,sans-serif;}
+.thunder_wp_pop h3{margin: 0;padding: 0;}
+.thunder_ico-close { position: absolute; top: 15px; right: 15px; }
+.thunder_wp_pop .thunder_pop_bd { padding: 36px 0 0 29px; }
+.thunder_tips_info { color: #000; }
+.thunder_tips_title { font-size: 24px; font-weight: normal; line-height: 33px; }
+.thunder_tips_title_em { font-size: 25px;font-style: normal;}
+.thunder_tips_ban { font-size: 18px; line-height: 30px; margin: 0;}
+.thunder_tips_warn { display: inline-block; *display: inline; *zoom: 1; padding: 0 4px 0 2px; margin: 6px 0 39px; height: 23px; line-height: 23px; font-size: 16px; font-weight: bold; color: #DC0A0A; background: #e8e8e8; }
+.thunder_tips_handle a { display: inline-block; width: 120px; height: 35px; line-height: 35px; font-size: 16px; color: #fff; text-align: center; border-radius: 3px; margin-right: 20px; }
+.thunder_tips_handle a:hover { text-decoration: none; opacity: .9; filter: alpha(opacity=90); }
+.thunder_btn-primary { background-color: #dc0a0a; text-decoration: none;}
+.thunder_btn-secondary { background-color: #fe8f00; text-decoration: none;}
+.thunder_action_superman { position: absolute; bottom: 36px; right: 12px; -webkit-transform-origin: bottom right; transform-origin: bottom right; -webkit-animation: twisterInDown 0.4s 0.2s both; animation: twisterInDown 0.4s 0.2s both; }
+
+.thunder_pop-tips { margin: -120px 0 0 -245px; width: 490px; height: 240px; background-color: #fff; box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.4); }
+
+@-webkit-keyframes twisterInDown { 0% { -webkit-transform: scale(0, 0) translateY(70%); }
+  100% { -webkit-transform: scale(1, 1) translateY(0%); } }
+@keyframes twisterInDown { 0% { transform: scale(0, 0) translateY(70%); }
+  100% { transform: scale(1, 1) translateY(0%); } }
